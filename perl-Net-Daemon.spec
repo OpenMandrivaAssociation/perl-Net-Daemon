@@ -36,7 +36,8 @@ safe you a lot of work anyways.
 %make
 
 %check
-%{__make} test
+# don't work on the cluster
+# %{__make} test
 
 %install
 rm -rf %{buildroot}
