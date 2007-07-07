@@ -29,7 +29,7 @@ those methods that aren't appropriate for you, but typically inheriting will
 safe you a lot of work anyways.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{module}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
