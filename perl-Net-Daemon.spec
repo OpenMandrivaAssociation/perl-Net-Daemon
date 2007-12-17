@@ -15,7 +15,6 @@ Url:            http://search.cpan.org/dist/%{module}/
 BuildRequires:	perl-devel
 %endif
 BuildArch:	noarch
-BuildRoot: 	%{_tmppath}/%{name}-%{version}
 
 %description
 Net::Daemon is an abstract base class for implementing portable server
