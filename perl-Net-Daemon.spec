@@ -1,21 +1,21 @@
-%define module 	Net-Daemon
-%define	name	perl-%{module}
-%define version 0.43
-%define release %mkrel 3
+%define upstream_name 	 Net-Daemon
+%define upstream_version 0.43
 
-Name: 		%{name}
-Version: 	%{version}
-Release: 	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Perl extension for portable daemons
-License: 	GPL or Artistic
+License: 	GPL+ or Artistic
 Group:		Development/Perl
-Source:		http://search.cpan.org/CPAN/authors/id/J/JW/JWIED/%{module}-%{version}.tar.bz2
-Url:            http://search.cpan.org/dist/%{module}/
+Url:        http://search.cpan.org/dist/%{upstream_name}/
+Source0:	http://search.cpan.org/CPAN/authors/id/J/JW/JWIED/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
 BuildArch:	noarch
-BuildRoot: 	%{_tmppath}/%{name}-%{version}
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Net::Daemon is an abstract base class for implementing portable server
@@ -29,7 +29,7 @@ those methods that aren't appropriate for you, but typically inheriting will
 safe you a lot of work anyways.
 
 %prep
-%setup -q -n %{module}
+%setup -q -n %{upstream_name}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -51,4 +51,3 @@ rm -rf %{buildroot}
 %doc README
 %{perl_vendorlib}/Net
 %{_mandir}/*/*
-
