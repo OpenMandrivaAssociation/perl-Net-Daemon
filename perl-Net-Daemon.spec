@@ -1,5 +1,5 @@
 %define upstream_name 	 Net-Daemon
-%define upstream_version 0.43
+%define upstream_version 0.46
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -8,9 +8,8 @@ Release:    %mkrel 1
 Summary:	Perl extension for portable daemons
 License: 	GPL+ or Artistic
 Group:		Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://search.cpan.org/CPAN/authors/id/J/JW/JWIED/%{upstream_name}-%{upstream_version}.tar.bz2
-
+Url:        	http://search.cpan.org/dist/%{upstream_name}/
+Source0:	http://search.cpan.org/CPAN/authors/id/J/JW/JWIED/%{upstream_name}-%{upstream_version}.tar.gz
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
@@ -29,7 +28,7 @@ those methods that aren't appropriate for you, but typically inheriting will
 safe you a lot of work anyways.
 
 %prep
-%setup -q -n %{upstream_name}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
