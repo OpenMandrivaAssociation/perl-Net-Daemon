@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	6
+Release:	7
 
 Summary:	Perl extension for portable daemons
 License:	GPL+ or Artistic
