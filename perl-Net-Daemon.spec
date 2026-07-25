@@ -1,14 +1,14 @@
 %define modname	Net-Daemon
-%define modver	0.48
+%define modver	0.52
 
 Summary:	Perl extension for portable daemons
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	18
+Version:	%{modver}
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}/
-Source0:	http://search.cpan.org/CPAN/authors/id/J/JW/JWIED/%{modname}-%{modver}.tar.gz
+Url:		https://github.com/cpan-authors/Net-Daemon
+Source0:	https://cpan.metacpan.org/authors/id/T/TO/TODDR/Net-Daemon-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl-devel
