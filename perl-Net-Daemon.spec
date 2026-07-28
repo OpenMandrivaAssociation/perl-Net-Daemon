@@ -4,7 +4,7 @@
 Summary:	Perl extension for portable daemons
 Name:		perl-%{modname}
 Version:	%{modver}
-Release:	1
+Release:	2
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/cpan-authors/Net-Daemon
@@ -39,7 +39,7 @@ safe you a lot of work anyways.
 %makeinstall_std
 
 %files 
-%doc README
+%doc README.md
 %{perl_vendorlib}/Net
 %{_mandir}/man3/*
 
